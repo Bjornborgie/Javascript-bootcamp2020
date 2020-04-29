@@ -1,0 +1,667 @@
+// Task-1
+
+// comment line
+
+/* Dit is ook een comment line*/
+
+
+
+
+
+
+// Task-2
+
+var myName;
+
+
+
+
+
+
+
+// Task-3
+
+// Setup
+var a;
+var b = 2;
+
+
+
+// Only change code below this line
+a=7;
+
+b = a;
+
+
+
+
+// Task-4 
+
+var a = 9;
+
+
+
+
+
+
+// Task 5
+
+// Only change code below this line
+var a = 5;
+var b = 10;
+var c = "I am a";
+// Only change code above this line
+
+a = a + 1;
+b = b + 5;
+c = c + " String!";
+
+
+
+
+// Task 6
+
+// Variable declarations
+var studlyCapVar;
+var properCamelCase;
+var titleCaseOver;
+
+// Variable assignments
+studlyCapVar = 10;
+properCamelCase = "A String";
+titleCaseOver = 9000;
+
+
+
+
+
+// Task 7
+
+var sum = 10 + 10;
+
+
+// Task 8
+
+var difference = 45 - 33;
+
+
+//Task 9
+
+var product = 8 * 10;
+
+
+
+//Task 9
+
+var quotient = 66 / 33;
+
+//Task 10
+var myVar = 87;
+
+// Only change code below this line
+myVar++;
+
+
+//Task 11
+
+var ourDecimal = 5.7;
+
+// Only change code below this line
+var myDecimal = ourDecimal;
+
+// task 12
+
+var product = 2.0 * 2.5;
+
+
+// task 13
+
+var quotient = 4.4 / 2.0; // Change this line
+
+
+// Task 14
+
+var remainder = 11 % 3;
+
+
+
+// task 15
+
+var a = 3;
+var b = 17;
+var c = 12;
+
+// Only change code below this line
+a += 12;
+b += 9;
+c += 7;
+
+
+// Task 16
+
+var a = 11;
+var b = 9;
+var c = 3;
+
+// Only change code below this line
+a -= 6;
+b -= 15;
+c -= 1;
+
+
+// Task 17
+
+var a = 5;
+var b = 12;
+var c = 4.6;
+
+// Only change code below this line
+a *= 5;
+b *= 3;
+c *= 10;
+
+
+// Task 18
+
+var a = 48;
+var b = 108;
+var c = 33;
+
+// Only change code below this line
+a /= 12;
+b /= 4; 
+c /= 11;
+
+
+// Task 19
+
+var myFirstName = " Bjorn";
+var myLastName = " Kouw";
+
+
+// Task 20
+
+var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; ; // Change this line
+
+
+// Task 21
+
+var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+
+//Task 22
+
+var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+ // Change this line
+
+
+ //Task 23 
+
+ var myStr = "This is the start. " + "This is the end." ; // Only change this line
+
+
+ // Task 24
+
+ // Only change code below this line
+
+var myStr = "This is the first sentence.";
+myStr += " This is the second sentence.";
+
+
+// Task 25
+
+// Only change code below this line
+var myName = "Bjorn";
+var myStr = "My name is "+ myName + " and I am well!";
+
+//Task 26
+
+// Change code below this line
+
+var someAdjective = "test";
+var myStr = "Learning to code is ";
+
+myStr += someAdjective
+
+
+
+//Task 27
+
+
+// Setup
+var firstLetterOfLastName = "";
+var lastName = "Lovelace";
+
+// Only change code below this line
+firstLetterOfLastName = lastName[0]; // Change this line
+
+
+
+// 29 
+
+// Setup
+var myStr = "Jello World";
+
+// Only change code below this line
+myStr = "Hello World"; // Change this line
+// Only change code above this line
+
+
+//30
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line
+var thirdLetterOfLastName = lastName[2]; // Change this line
+
+//31
+
+var myArray = ["test", 1];
+
+
+//32
+
+// Only change code below this line
+var myArray = [["test", 11],["test2", 23]];
+
+//33
+
+// Setup
+var myArray = [50,60,70];
+
+// Only change code below this line
+var myData = myArray[0];
+
+
+//33 
+
+// Setup
+var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+
+// Only change code below this line
+var myData = myArray[2][1];
+
+
+//34
+
+// Declare the myGlobal variable below this line
+var myGlobal = 10;
+var oopsGlobal;
+
+function fun1() {
+  // Assign 5 to oopsGlobal Here
+oopsGlobal = 5;
+}
+
+// Only change code above this line
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+
+//35
+
+function myLocalScope() {
+  'use strict';
+
+  // Only change code below this line
+var myVar;
+  console.log(myVar);
+}
+myLocalScope();
+
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+
+// Now remove the console log line to pass the test
+
+
+
+//36
+
+
+// Setup
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+
+var outerWear = "sweater" 
+
+  // Only change code above this line
+  return outerWear;
+}
+
+myOutfit();
+
+
+// 37
+
+function timesFive(num) {
+return num * 5
+}
+
+
+// 38
+
+function welcomeToBooleans() {
+
+  // Only change code below this line
+
+  return true; // Change this line
+
+  // Only change code above this line
+}
+
+
+//39
+
+
+function myFunction(wasThatTrue) {
+
+  // Only change code below this line.
+  if(wasThatTrue) {
+    return "That was true";
+  }
+  return "That was false";
+
+  // Only change code above this line.
+
+}
+
+// 40
+
+// Setup
+function testEqual(val) {
+  if (val == 12) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testEqual(10);
+
+
+// 41 
+
+// Setup
+function testStrict(val) {
+  if (val === 7) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(10);
+
+
+// 42
+
+// Setup
+function compareEquality(a, b) {
+  if (a === b) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+compareEquality(10, "10");
+
+
+// 43
+
+// Setup
+function testNotEqual(val) {
+  if (val != 99) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+testNotEqual(10);
+
+
+// 44
+
+// Setup
+function testStrictNotEqual(val) {
+  if (val !== 17) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+testStrictNotEqual(10);
+
+
+// 45
+
+
+function testLogicalOr(val) {
+  // Only change code below this line
+
+  if (val < 10  || val > 20) {
+    return "Outside";
+  }
+
+  // Only change code above this line
+  return "Inside";
+}
+
+testLogicalOr(15);
+
+
+
+
+
+
+// 46
+
+var myList = [["bier", 15], ["whisky", 10],["wodka", 5], ["gin", 20], ["Wijn", 30]];
+
+
+// 47
+
+
+function reusableFunction(){
+  console.log("Hi World");
+}
+
+reusableFunction()
+
+
+// 48 
+
+function testLessThan(val) {
+  if (val < 25) {  // Change this line
+    return "Under 25";
+  }
+
+  if (val < 55) {  // Change this line
+    return "Under 55";
+  }
+
+  return "55 or Over";
+}
+
+testLessThan(10);
+
+
+
+
+// 49
+
+function testLessOrEqual(val) {
+  if (val<=12) {  // Change this line
+    return "Smaller Than or Equal to 12";
+  }
+
+  if (val <= 24) {  // Change this line
+    return "Smaller Than or Equal to 24";
+  }
+
+  return "More Than 24";
+}
+
+testLessOrEqual(10);
+
+
+// 50 
+
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (val <= 50 && val >= 25) {
+    
+      return "Yes";
+    
+  }
+
+  // Only change code above this line
+  return "No";
+}
+
+testLogicalAnd(10);
+
+// 51
+
+function testGreaterOrEqual(val) {
+  if (val >= 20) {  // Change this line
+    return "20 or Over";
+  }
+
+  if (val >= 10) {  // Change this line
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+testGreaterOrEqual(10);
+
+// 52 
+
+function functionWithArgs(param1, param2){
+console.log(param1+param2)
+}
+
+
+functionWithArgs(1,2);
+
+
+// 53
+
+// Setup
+var sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
+
+// Only change code below this line
+function addFive(){
+ sum = sum + 5;
+}
+
+// Only change code above this line
+
+addThree();
+addFive();
+
+
+// 54
+
+// Setup
+var processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+// Only change code below this line
+processed = processArg(7);
+
+console.log(processed);
+
+// 55
+
+function nextInLine(arr, item) {
+arr.push (item);
+var removed = arr.shift();
+  return removed;
+  // Only change code above this line
+  
+
+}
+
+// Setup
+var testArr = [1,2,3,4,5];
+
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+
+
+// 56
+
+// Setup
+var myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line
+var removedFromMyArray = myArray.pop();
+
+
+// 57
+
+// Setup
+var myArray = [["John", 23], ["dog", 3]];
+
+// Only change code below this line
+var removedFromMyArray = myArray.shift();
+
+
+// 58
+
+myArray.unshift(["Paul",35]);
+
+// 59
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line
+var lastLetterOfLastName = lastName[lastName.length - 1]; // Change this line
+
+
+
+// 60
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line
+var secondToLastLetterOfLastName = lastName[lastName.length - 2]; // Change this line
+
+
+// 61
+
+
+var myNoun = "dog";
+var myAdjective = "big";
+var myVerb = "ran";
+var myAdverb = "quickly";
+
+// Only change code below this line
+var wordBlanks = "The " + myAdjective + " "+  myNoun + " " + myVerb +" "+ myAdverb + " In the park last sunday"; // Change this line
+// Only change code above this line
+console.log(wordBlanks);

@@ -1,0 +1,84 @@
+<h1>Day 3</h1>
+<h3>Coding train Array</h3>
+<p>Array is an list of values, order is what matters compared to objects. In an array you count from 0
+    You can put anything in to an array: objects, numbers, variables. Built around the array if you try to reach an
+    element that doesn'<table>
+        exist yet. You can see the current length of the array by nameArray.length
+
+
+</p>
+
+var nums = [50,71,12,-22];
+
+nums[2]Pull the value 12 out of the array
+
+
+
+<h3>Coding train objects</h3>
+
+<p>Objects are a way to organize your code, when a lot of variables are about the same element for example a circle
+    you can put these in an object.
+</p>
+
+
+<p>Circle is the container for the variables x y and diameter, if you need the variable of x you should use dot notation
+    as is seen at line 33</p>
+
+var circle = {
+x: 0,
+y:100,
+diameter:50
+
+
+};
+
+circle.x
+
+
+<h3>Data Structures: Objects and Arrays</h3>
+
+<h5>Expressions</h5>
+<p>Expressions as .length give acces to the property of the value almost all Javascript expressions has properties
+    except 0 and undefined. there are 2 main ways to acces a property:
+    <ol>
+        <li>with a dot like value.x</li>
+        <li>and brackets likevalue[x]</li>
+    </ol>
+    but not necessarily the same property. the dot notation looks literally for the name after the dot, with square
+    bracketsexpression between the brackets is evaluated. elements in an array are stored as the array properties, using numbers as property names
+you cant use the dot notation for numbers.  So the name of the array is for example 0 = "test". The array length tells us 
+how many properties the array has, so that,s why we write array.length.
+
+</p>
+
+<h5>Methods</h5>
+<p>Both string and array values contain, in addition to the length property, a number of properties that hold function values. toUppercase is a good example, when it is called it will convert a copy of the string in uppercases after is has send it to its function.
+    Properties that contain functions are called methods.
+</p>
+
+<p>.push ads number 4 at the end of the array, .pop removes the last value of the array</p>
+    sequence.push(4);
+    sequence.pop();
+
+    <h5>Objects</h5>
+<p>Reading a property that doesn't exist in an object will give undefined
+    It is possible to delete properties by the delete binary it goed like this:delete anObject.left;
+
+</p>
+
+
+<h5>Objects mutability</h5>
+
+<p>The reason that console.log(object1 == object3);= false is that object 1 refers to another identity
+    </p>
+let object1 = {value: 10};
+        let object2 = object1;
+        let object3 = {value: 10};
+        
+        console.log(object1 == object2);
+        // → true
+        console.log(object1 == object3);
+        // → false
+
+        <h5>Further arrayology</h5>
+        

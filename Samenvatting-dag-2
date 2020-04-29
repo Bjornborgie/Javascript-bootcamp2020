@@ -1,0 +1,197 @@
+<h3>function basics video</h3>
+
+<p>P5 is a library of functions, you don't have to call the setup function because p5 does this automatically at the
+    beginning. On the otherhand
+    you have the ellipse function, you only have to call this function p5 have already defined it.
+</p>
+
+<h5>Key principles of principles</h5>
+<ul>
+    <li>modulairity</li>
+    <li>Reusability</li>
+</ul>
+<p>Important is to define every functionality in your program, is something a different functionality it has to be a
+    different function
+    for example: to draw a ball and make the ball move are 2 different things. So it has to be 2 different fucntions
+</p>
+<ul>
+    <li>Function expression: when you have an variabel en set it equal to an function, at the end of an expression use
+        semi columns!
+        Calling the function works the same way: use the variable name followed by parantheses. With hoisting the
+        function will be automatically on top of the file
+        except when it is an function expression.
+    </li>
+</ul>
+
+
+
+
+<h3>Modern JavaScript Tutorial</h3>
+
+<p>When you only define the function it doesn't do anything because you have to call the function</p>
+<p>Functions are on the object type on the datatype list, you can call functions as many times as you want.</p>
+<p>It is possible to give default values in to the parameters of the function, when you call an function you can
+    overwrite the parameters </p>
+<p>When an variable is only locally available in an function use the return keyword. And set the value where you have
+    called the function in an variable</p>
+
+<h5>Arrow function</h5>
+
+<p>There is no function keyword anymore, you take the variable name and set it equal to parameters, then you write an
+    arrow and do the curly braces and put in your code, you close the function with an semicolumn </p>
+const = calcArea = (radius) => {
+return 3.14 * radius**2
+};
+<p>When you only have one parameter you can takeaway the parantheses, but only when there is one! with none parameters
+    only parantheses</p>
+
+const = calcArea = radius => {
+return 3.14 * radius**2
+};
+
+<p>When you want to return something really simple that fits on one line write it like this! You don't need the return
+    keyword anymore because the arrow takes that role</p>
+
+const = calcArea = radius => 3.14 * radius**2;
+
+
+
+<h5>Methods</h5>
+
+<p>Methods are function but are associated with an datatype, and using the dot notation</p>
+const name = shaun;
+let resultTwo = name.toUpperCase();
+
+
+<h5>Call back function</h5>
+<p>You can pass another function as an parameter while calling a function</p>
+
+
+<h5>For each</h5>
+<p>For is a method but behaces is more or less like a loop, the function will fire 5 times. For each expects an function
+    as an paramater </p>
+<!-- Vragen call back functions -->
+let people = ["Mario", "Luigi", "ryu"];
+----------------------------------------------
+people.forEach(person => {
+console.log(person); Mario Luigi ryu
+});
+
+----------------------------------------------
+
+people.forEach(() => {
+console.log("something"); 3 something
+});
+----------------------------------------------
+
+
+people.forEach((person, index) => {
+console.log(person); Mario 0, Luigi 1, ryu 2
+});
+
+
+<h3>functions Eloquent Javascript </h3>
+<p>A function definition is a regular binding, the value of the binding is the function.</p>
+<h5>nested functions</h5>
+<p>We know about local and global scope with variables, but what happens with a nested scope?
+    A nested scope is a function inside another function. Each local scope can see also see all the scopes that contain
+    it,and all scopes can see the global scope. this approach to binding visabiltiy is lexical scoping.
+</p>
+<p>Think of Environment Records as buckets of stuff. These are not Objects or Functions or Variables or anything we code
+    in JavaScript, these buckets contain all these things. There are many buckets in a JavaScript application. Each
+    bucket operates independently from the other buckets. That independence is represented as a Context (or Execution
+    Context) in JavaScript. But sometimes we want to use stuff from one bucket inside a different bucket. That is where
+    binding comes in. We can bind stuff from one bucket into the context of a different bucket for execution there. (A
+    side effect of doing all that is the this keyword reflects the bucket borrowing the stuff).
+    <a href="https://stackoverflow.com/questions/49662203/what-does-binding-mean-in-javascript">Source</a>
+
+</p>
+
+<p>Before ES 6 the only thing that declared a scope was a function, now with let and const instead of the var keyword it
+    is relevant there as well.
+</p>
+
+<p>Don't use arrow functions and normal functions in the same program, it is the same thing</p>
+
+<p>Either function that takes a function as input or sends a function out as output is the definition of Higher order
+    function</p>
+<p>The place were the computer remembers the context is called the call stack, everytime a function is called the
+    current location is stored on top of the call stack
+    When it returns a function it removes the top of the call stack and continues its execution. </p>
+
+<p>If you pass too many arguments while calling a function Javascripts ignores the extra arguments because it is such
+    forgiving, if you pass to few the missing values become undefined </p>
+<p>Everytime you call the function JavaScript will forget the output when you call the function again, except when you
+    place the outcome in a variable this is called closure </p>
+
+<p>An function can run multipletimes, like a loop. The function which is copy paste underneat for example. When the
+    exponent is not 0 it will run the functio again and again.
+    This way can also done by a loop, but a loop is harder to read but in performance it will run 3 times as quick.
+</p>
+
+function power(base, exponent) {
+if (exponent == 0) {
+return 1;
+} else {
+return base * power(base, exponent - 1);
+}
+}
+
+console.log(power(2, 3));
+// → 8
+
+
+
+<h3>Higher order functions video</h3>
+
+<a href="https://stackoverflow.com/questions/49662203/what-does-binding-mean-in-javascript"></a>
+<h5>Call back functions</h5>
+<p>This is an typical example of an call back function, In line 155 we are calling the function doHomework the part with
+    math is well known, but with
+    alertfinished will replace callback so at line 151 callback() will be replaced with alertFinished() </p>
+
+function doHomework(subject, callback) {
+alert(`Starting my ${subject} homework.`);
+callback();
+}
+function alertFinished(){
+alert('Finished my homework');
+}
+doHomework('math', alertFinished);
+
+
+
+<p>It is possible to make new functions in an function take an look at these example</p>
+
+function multiplier(factor){
+return function(x) {
+return x * factor;
+}
+}
+
+let doubler = multiplier(2);
+value undefined inside the undefined part is the function so the function doubler has as value function x
+
+doubler(4) is 8 because 4 is the x
+
+because function(4){
+return 4 * 8
+}
+
+
+
+
+
+which can be in ES 6 as
+
+function multiplier(factor) {
+return x => x * factor;
+}
+
+
+<h3>Higher order functions video</h3>
+<p>It is easy to make mistakes in programming, shorter code doesn't always mean easier, the closer it is to english the
+    easier.
+</p>
+
+<p>Higher order function shine at data processing </p>

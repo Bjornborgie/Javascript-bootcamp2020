@@ -1,0 +1,182 @@
+<h1>Day 1</h1>
+<p>This is a summary of the articles which I have read during the first day of the CMD tech Javascript bootcamp</p>
+
+
+<h3>Introduction to JavaScript</h3>
+<p>Programming could be really frustrating but don't give up!
+    We communicate with computers through programming languages,
+    with such languages the computer does what we want.
+    A computer is good at doing stupid straightforward things, but they do it at an extreme speed.
+</p>
+
+
+<p>A program is nothing, but it grows as we type. That's why structure is really important, otherwise, we wouldn't
+    understand our own made programs. Some say we have to stay at best practices and standards, but that's not the holy
+    truth,
+    because the field is rapidly emerging so we encounter a lot of new problems which the current standards are not the
+    best solution
+    for the new problems.
+</p>
+
+<h5>Why languages matter</h5>
+<p>
+    Before there were programming languages there were only 0's and 1's. These 0 and 1's tell us for example what number
+    has to be written in the memory. When you make a mistake it is much harder to discover where it goes wrong.
+    When you give names and numbers instead of 0's and 1's it is much easier to remember and it is much easier to see
+    where something goes wrong
+    Another part of programming is handy that is doing a lot of uninteresting work for us.
+</p>
+
+<h5>Javascript</h5>
+
+<p>Javascript has nothing to do with Java, they chose the name Javascript for marketing purposes.
+
+    Javascript is founded by the browser Netscape in 1995, after its adoption outside Netscape the language had to be
+    standardized.
+    This is called the ECMA script standard. (By the Swiss Company Ecma Internation Organization) When we talk about
+    Javascript or Ecmascript we are talking about the same thing</p>
+
+
+<p>Javascript is extremely liberal compared to other programming languages, it accepts a lot which is nice. But on the
+    other hand, when it accepts almost anything it is harder to tell why the language is doing something different than
+    you expected. The makers of Javascript did this to make
+    the language easier for beginners.</p>
+
+
+<h3>ECMAScript versions: Ecma script guide</h3>
+
+<p>ECMA is the standard of which Javascript is based, it is often called ES. Besides Javascript other languages
+    implemented
+    ECMAscript including: Actionscript and Jscript. After IE9 Microsoft stopped Jscript and started Javascript for their
+    browser </p>
+
+<h5>TC 39</h5>
+<p>TC 39 is the committee that evolves Javascript that means they vote what in what direction Javascript is heading.
+    Members of TC 39 are for example Apple and Google.
+
+</p>
+<h5>ES numbers</h5>
+<p>When you are talking about a Javascript you have to say the letters ES and the year of the version (officially since
+    2015)
+    But before 2015 they had version numbers. A lot of people still use the version numbers when they talk about a
+    specific version of Javascript So if we are talking about ES6 or ES2015 we are talking about the same thing.
+</p>
+
+
+
+<h3>You Don't Know JS Yet:</h3>
+<h5>Web rules everything</h5>
+<p>The area where js is used is huge, from robots to lightbuls, but the area which is the most important is the web. Javascript has a 
+    specificition about the rules, syntax and behavior. The mostly match what we see in the web, but in rare cases it doesn't match
+    these exceptions are allowed for web only, but other areas than the web should stick to the specification. 
+</p>
+
+<h5>Web rules everything</h5>
+<p>
+Not everything is Javascript code, things like Alert(...) and console.log(...) aren't defined javascript code. They are javascript looking
+API'S  but we use them so much universally they are agreed. Some say that Javascript is inconsistent but such as Alert(...) is not really Javascript.
+
+
+</p>
+
+<h5>Backwards and forwards</h5>
+
+<p>Javascript is backwards compatible that meanshat once something is accepted as valid JS, there will not be a future change to the language that causes that code to become invalid JS.
+    It gives confidence that once you write working Javascript it will always work! Javascript is not forwards compatible like HTML CSS  means that including a new addition to the language in 
+    a program would not cause that program to break if it were run in an older JS engine. It would not be practical for javascript because when it is forwards compatible it would skip code it wouldn't understand.
+Because it is not forwards compatible there are transpillers, these take our newly written javascpript and convert it to older syntax. But as a developer you have to write te new JS code.
+</p>
+<p>Is javascript a interpreted script or a compiled program? </p>
+<h5>What's in an Interpretation?</h5>
+
+<!-- Vragen in de les -->
+
+<h5>Strict mode tells us how Javascript should be written, this is good for collaboration and helps us to prevent errors when compiling 
+    these errors are not syntax errors but the code wouldn't work. We have to see strict mode as a tool like JS lint. 
+    Javascript didn't make strictmode the default because it is backwards compatible.
+</h5>
+
+
+<h3>ES5 versus ES6</h3>
+<h5>Var vs Let vs const</h5>
+<p>ES5 we only had var to declare a variable. The var is different from other programming languages, the var is always
+        a global variable, expect when you declare the var in a function.
+</p>
+
+<p>Hoisted: Variables take out the declared variable and declare it at the top of your function no matter where is declared in the function,
+        if you forget the variable declaration it will be a global variable. "Use strict" statement could prevent this. But nevertheless using var can sometimes be surprising.</p>
+
+<ul>
+    <li>IFE: Immediately invoked function expression: A function that is declared and immediatley called.</li>
+</ul>
+<p>let has a log scope it will always be accessible inside a scope, DON'T USE VAR use let or const instead You can not
+        reassign const, but you can reassign let.</p>
+
+<h5>Minimize mutable state</h5>
+<p>To prevent errors you can better use const instead of let if you are sure that variable wouldn't be reassigned, it
+    can prevent errors.</p>
+
+
+
+<h3>Values, types and operators</h3>
+
+
+
+
+
+<p>Javascript uses a fixed number of 64 bits to create a number. with 2 different options (0 and 1)
+    you will have 2 tot de macht 64 options. In the past this was a problem due to memory issues but not anymore.
+problems will arise with with fractional numbers such as pi, javascript doesn't have enouh bits to store them. </p>
+
+<p>inside the computer there is only data, data is described in bits (the 0 and 1's)    0   0   0   0   1   1   0   1 
+                                                                                        128  64  32  16   8   4   2   1 = 13</p>
+
+
+<p>In a Javascript environment chunked bits are called values, these chunks represent pieces of information so they would't get lost
+    To create a value you have to come up with a name and it will be stored somewhere.
+</p>         
+
+
+<p>a special arethmetic operator is the % sign this is the remainder operator. 144 % 12 = 0 and 314 % 100 = 14
+    this shows that is divides in whole numbers.
+</p>
+
+<p>With \ you are escaping the character in a string for example \n gives a new line. Strings are as well modeled in a serie of bits.
+    The way Javascript does this is following the unicode standard. These standard assigns a number virtually to 
+    ervery character you would need. Javascript has 16 bits for a string so 2 tot de macht 16 but unicode has twice as much of them.
+</p>
+<h5>comparison</h5>
+<ul>
+<li>>= (greater than or equal to)</li>
+ <li><= (less than or equal to)</li>
+   <li> != (not equal to)</li>
+
+</ul>
+<h5>Logical operators</h5>
+
+<ul>
+<li>&& = and</li>
+<li>|| = or</li>
+<li>! Unary operator true produces false, and false produces true</li>
+</ul>
+
+<h5>Automatic type conversion</h5>
+<p>Javascript tries to be as forgiving as possible when you do for example that's why it sometimes converts a string into a number
+    this is called type type coercion. When something doesn't map to a number in an obvious way you will gat Nan. Javascript tries to do type conversions
+one way to prevent this is to check with for example === if it is exactly equal to</p>
+
+
+
+
+<h3>Conventions</h3>
+<p>This article is about how to keep Javascript code as readable as possible to make it easier for you and you colleague programmers
+        When I read the article there I encountered some conventions I do wrong structurally:
+</p>
+
+<ul>
+    <li>(myVar), not ( myVar )</li>
+<li>Use single quotes in JavaScript, wherever single quotes are needed in syntax.</li>
+<li>Use ES 6 instead of ES 5</li>
+<li>Let and const</li>
+
+</ul>

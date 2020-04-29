@@ -1,0 +1,344 @@
+// Iterate with Javascript While loops
+
+
+// Setup
+var myArray = [];
+
+// Only change code below this line
+var i = 5;
+var y = 7;
+
+while(y > 1 ) {
+  myArray.push(i);
+  i--;
+  y--;
+}
+
+console.log(myArray);
+
+
+
+
+// Iterate with Javascript for loops
+// Setup
+var myArray = [];
+
+// Only change code below this line
+for (var i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+
+console.log(myArray);
+
+
+//// Iterate Odd Numbers With a For Loop
+
+
+// Setup
+var myArray = [];
+
+// Only change code below this line
+for (var i = 1; i < 10; i += 2) {
+  myArray.push(i);
+}
+
+console.log(myArray);
+
+
+
+
+//Basic JavaScript: Count Backwards With a For Loop
+
+// Setup
+var myArray = [];
+
+// Only change code below this line
+for (var i = 9; i > 0; i-=2) {
+  myArray.push(i);
+}
+
+console.log(myArray);
+
+
+
+
+
+
+
+
+//Basic JavaScript: Build JavaScript Objects
+
+
+var myDog = {
+// Only change code below this line
+"name":"Lucky", 
+"legs": 4,
+"tails": 1,
+"friends": ["Bonno", "Thomas"]
+// Only change code above this line
+};
+
+
+
+//Basic JavaScript: Accessing Object Properties with Dot Notation
+
+// Setup
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+// Only change code below this line
+
+var hatValue = testObj.hat;      // Change this line
+var shirtValue = testObj.shirt;    // Change this line
+
+
+Basic JavaScript: Accessing Object Properties with Bracket Notation
+// Setup
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+//Basic JavaScript: Accessing Object Properties with Variables
+/ Setup
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line
+var myNumber = 12; 
+var playerNumber =16;     // Change this line
+var player = testObj[playerNumber] // Change this line
+
+console.log(player);
+
+// Only change code below this line
+
+var entreeValue = testObj["an entree"];   // Change this line
+var drinkValue = testObj["the drink"];    // Change this line
+
+
+//Basic JavaScript: Updating Object Properties
+
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line
+myDog["name"] = "happy coder";
+
+
+//Basic JavaScript: Add New Properties to a JavaScript Object
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line
+myDog["bark"] = "woof";
+
+//Basic JavaScript: Delete Properties from a JavaScript Object
+
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line
+delete myDog.tails;
+
+
+
+//Basic JavaScript: Using Objects for Lookups
+
+
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  // Only change code below this line
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+
+result= lookup[val];
+  // Only change code above this line
+  return result;
+}
+
+console.log(phoneticLookup("charlie"));
+
+//Basic JavaScript: Accessing Nested Objects
+
+// Setup
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+
+//Basic JavaScript: Accessing Nested Arrays
+
+// Setup
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+// Only change code below this line
+
+var secondTree = myPlants[1].list[1]; // Change this line
+
+
+var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
+
+
+//Basic JavaScript: Manipulating Complex Objects
+
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+
+  {
+  "artist": "Daft Punk",
+  "title": "Homework",
+  "release_year": 1997,
+  "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ]
+  }
+  // Add a record here
+];
+
+
+//Basic JavaScript: Record Collection
+
+// Setup
+var collection = {
+    "2548": {
+      "album": "Slippery When Wet",
+      "artist": "Bon Jovi",
+      "tracks": [ 
+        "Let It Rock", 
+        "You Give Love a Bad Name" 
+      ]
+    },
+    "2468": {
+      "album": "1999",
+      "artist": "Prince",
+      "tracks": [ 
+        "1999", 
+        "Little Red Corvette" 
+      ]
+    },
+    "1245": {
+      "artist": "Robert Palmer",
+      "tracks": [ ]
+    },
+    "5439": {
+      "album": "ABBA Gold"
+    }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// Only change code below this line
+function updateRecords(id, prop, value) {
+  if (value === "") {
+    delete collection[id][prop];
+  } else if (prop === "tracks") {
+    collection[id][prop] = collection[id][prop] || [];
+    collection[id][prop].push(value);
+  } else {
+    collection[id][prop] = value;
+  }
+  
+  return collection;
+}
+
+// Alter values below to test your code
+updateRecords(2468, "tracks", "test");
+console.log(updateRecords(5439, "artist", "ABBA"));
+
+
+
+
+
+//Basic JavaScript: Testing Objects for Properties
+
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if(obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+  // Only change code above this line
+}
+
+//Basic JavaScript: Iterate Through an Array with a For Loop
+
+// Setup
+var myArr = [ 2, 3, 4, 5, 6];
+var total = 0;
+// Only change code below this line
+for (var i = 0; i < myArr.length; i++) {
+   total += myArr[i];
+}
+
+console.log(total);

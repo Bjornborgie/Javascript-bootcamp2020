@@ -1,0 +1,83 @@
+<h3>You Don't Know JS Yet: Scope and Closures</h3>
+
+<p>Binding is A variable, when you define a variable outside a function it's a global variable inside a function it is
+    an local variable.
+    It is possible to put a function in a regular binding like the example below. Each binding has a scope, this is
+    where the binding is visible.
+</p>
+
+const square = function(x) {
+return x * x;
+};
+
+<p>
+    Bindings created for function parameters are local bindings, every time a function is called new instances of these
+    bindings are created.Local bindings don't understand what's going on in the global setting.
+    When a function is nested local variables inside the deepes nested function can't be seen inside the
+</p>
+
+
+<h3>Eloquent Javascript, binding and scopes</h3>
+
+<h5>Why global scope</h5>
+<p>How do all these Javascript are loaded in the Javascript engine </p>
+
+<ul>
+    <li>ES Modules: All files are individually loaded in to the JS environment each module then imports references to
+        whichever modules it needs acces.</li>
+    <li>Bundler all files are typically concatenated together which means, the browser and the JS engine only processes
+        one big file. In some build setups the entire contents of the files are wrapped inside one big function,
+        that makes that all the global variables become local.</li>
+    <li>
+        A bundler is used for an application or simple script tags are used, the global scope is the only wat for them
+        to cooperate with each other. The global scope is not a dumping place for variables, that is asking for bugs!
+    </li>
+
+</ul>
+
+
+<p>An difference between an global variable and an global property is that within just the global scope itself a global
+    object property can be shadowed by a global variable.</p>
+<p>A DOM element with an ID automatically creates a global variable. Every global variable in browser base JS gets
+    window.[varName] the weird thing is that when we
+    have a var called name and we assign 42 Javascript converts 42 into a string </p>
+
+var name = 42;
+
+console.log(name, typeof name);
+// "42" string
+
+
+<h5>Webworkers</h5>
+<p>Web workers are a webplatform extension on top of browser JS behavior, which allows a JS file to run in a completely
+    seperate thread.
+    Webworker code does not have acces to the DOM element because it is treated as a wholly seperated program however it
+    is still runned by the JS web engine. In web worker a Global object reference is made using self.
+</p>
+
+<h5>Developer tools</h5>
+
+<p>Developer tools don't make an own JS environment, they process JS code but it can happen when you type some JS code
+    in the developer tool, it behaves different as normal. The reason for this is that the code but it doesn't have a
+    sctrict processor.
+</p>
+
+
+<h5>ES Modules</h5>
+<p>ESM made it easy to work more module based, an important thing is that when you make an variable at a top level scope
+    it is not a global variable anymore, it is a module-global-variable
+    it is still possible to make global variables but not at by declaring them at the top of your code.
+</p>
+
+<h5>Node</h5>
+
+<p>Note treats every single .js file as a module, it means that the top of your node programs never is actually the
+    global scope. The only way to make global variables is to define a property before the actual file name such as the
+    example below. Global is not defined by JS but by node.</p>
+global.studentName = "Kyle";
+
+
+
+<h3>fun fun funtion Closures</h3>
+<p>In javascript functions are not just functions, they are also closures, that means that they have acces to variables
+    outside the function body. A lot of other programming languages does not support closures </p>
